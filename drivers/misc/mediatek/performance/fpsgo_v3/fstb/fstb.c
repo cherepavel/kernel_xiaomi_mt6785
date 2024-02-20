@@ -1600,6 +1600,7 @@ void fpsgo_fbt2fstb_query_fps(int pid, unsigned long long bufID,
 	mutex_unlock(&fstb_lock);
 }
 
+void (*eara_pre_active_fp)(int is_active);
 static void fstb_fps_stats(struct work_struct *work)
 {
 	struct FSTB_FRAME_INFO *iter;
